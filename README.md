@@ -23,3 +23,4 @@ What I learned:
 the differences between private and public key for creating relational databases (:make_id vs :make)
 the differences between scaffold and model
 the meaning behind has_and_belongs_to_many, .. edit_car_path
+I also should have named the field in my part model part_name rather than part in order to make things a little less confusing!
