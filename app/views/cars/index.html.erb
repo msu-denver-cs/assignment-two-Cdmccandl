@@ -23,7 +23,7 @@
         <td><%= car.country %></td>
         <td>
           <ul>
-          <%= car.parts.each do |part| %>
+          <% car.parts.each do |part| %>
             <li><%= part.part %></li>
           <% end %>
         </ul>
