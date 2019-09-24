@@ -13,7 +13,7 @@
 
   <div class="field">
     <%= form.label :make %>
-    <%= form.collection_select :make, Make.all, :id, :name %>
+    <%= form.collection_select :make_id, Make.all, :id, :name %>
   </div>
 
   <div class="field">
@@ -35,6 +35,8 @@
     <%= form.label :part_id %><br>
     <%= form.collection_check_boxes :part_ids, Part.all, :id, :part %>
   </div>
+
+
 
   <div class="actions">
     <%= form.submit %>

@@ -2,8 +2,8 @@
 
 one:
   car: one
-  model: one
+  part: one
 
 two:
   car: two
-  model: two
+  part: two
