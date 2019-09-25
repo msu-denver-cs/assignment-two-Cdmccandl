@@ -4,7 +4,7 @@ Assignment 1:
 command line:
 rails new ...
 rails generate scaffold Make name:string country:string
-rails generate scafoold Car make:string model:string VIN:string country:string make:references
+rails generate scaffold Car make:string model:string VIN:string country:string make:references
 rails generate scaffold Part part:string
 rails generate model CarsParts car:references model:references --force-plural
 rails db:migrate
