@@ -15,10 +15,17 @@ class PartsController < ApplicationController
   # GET /parts/new
   def new
     @part = Part.new
+    @cars = Car.all
   end
 
   # GET /parts/1/edit
   def edit
+    @cars = Car.all
+  end
+
+  def search
+    @parts = Part.where("part like ?", "%#{params[:query]}%")
+    render :index
   end
 
   # POST /parts
