@@ -1,20 +1,10 @@
 # README
 Conor McCandless
-Assignment 1:
-command line:
-rails new ...
-rails generate scaffold Make name:string country:string
-rails generate scafoold Car make:string model:string VIN:string country:string make:references
-rails generate scaffold Part part:string
-rails generate model CarsParts car:references model:references
-rails db:migrate
+Assignment 2:
+added validations to each model. assumed that length for each should be less than 2
+and value presence should be true.
 
-changes made to models:
-Make has many cars
-car belongs to Make
-car has and belongs to many Parts
-part has and belongs to many cars
+added search bars to each view by creating a search function in each controller
+and calling this seach function in the view index for each model.
 
-form changes:
-added drop down form for car creation that references makes
-added check box selection form for car creation that references Parts
+still working on testing and fixing odd bugs, (car create doesnt work, part destroy doesnt work)
