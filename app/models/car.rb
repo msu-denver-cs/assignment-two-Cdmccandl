@@ -3,6 +3,6 @@ class Car < ApplicationRecord
   has_and_belongs_to_many :parts
 
 validates :make, presence: true
-validates :vin_number, presence: true, uniqueness: true
-validates :model_title, presence: true, length: { in: 2..20 }
+validates :VIN, presence: true, uniqueness: true
+validates :model, presence: true, length: { in: 2..15 }
 end
