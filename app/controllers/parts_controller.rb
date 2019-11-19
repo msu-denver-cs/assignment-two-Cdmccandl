@@ -21,6 +21,14 @@ class PartsController < ApplicationController
   # GET /parts/1/edit
   def edit
     @cars = Car.all
+<<<<<<< HEAD
+=======
+  end
+
+  def search
+    @parts = Part.where("part like ?", "%#{params[:query]}%")
+    render :index
+>>>>>>> WDA2/master
   end
 
   # POST /parts
