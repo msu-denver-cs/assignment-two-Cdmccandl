@@ -34,6 +34,13 @@
       </tr>
     <% end %>
   </tbody>
+
+  <%= form_tag(search_cars_url, method: "get") do %>
+    <%= label_tag(:query, "Search for Car:") %>
+    <%= text_field_tag(:query) %>
+    <%= submit_tag("Cars Search") %>
+  <% end %>
+
 </table>
 
 <br>
