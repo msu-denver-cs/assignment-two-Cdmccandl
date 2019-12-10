@@ -1,17 +1,15 @@
 # Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
 one:
-  make: MyString
-  model: MyString
-  VIN: MyString
+  make: one
+  model: BMW
+  VIN: MVNP45
   country: MyString
   part: MyString
-  make: one
 
 two:
-  make: MyString
-  model: MyString
-  VIN: MyString
+  make: two
+  model: GMC
+  VIN: BNR43
   country: MyString
   part: MyString
-  make: two

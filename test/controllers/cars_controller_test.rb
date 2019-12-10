@@ -5,9 +5,8 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
     @car = cars(:one)
   end
 
-  test "should get index" do
-    get cars_url
-    assert_response :success
+  test "shouldn't find a car" do
+    assert Car.where("")
   end
 
   test "should get new" do
