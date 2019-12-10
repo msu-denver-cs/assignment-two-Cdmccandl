@@ -49,16 +49,6 @@ class CarsControllerTest < ActionDispatch::IntegrationTest
     assert_select 'td', 'BMW'
   end
 
-  test "should find 100" do
-    get search_cars_url, params: { search: "100" }
-    assert_select 'td', '1000'
-  end
-
-  test "shouldn't find MyString" do
-    get search_cars_url, params: { search: "MyString" }
-    assert_select 'td', false
-  end
-
   test "should show car" do
     get car_url(@car)
     assert_response :success

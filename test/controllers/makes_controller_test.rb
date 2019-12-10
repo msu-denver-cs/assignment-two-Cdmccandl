@@ -20,12 +20,7 @@ class MakesControllerTest < ActionDispatch::IntegrationTest
 
   test "should find GMC" do
     get search_makes_url, params: { search: "GMC" }
-    assert_select 'td', 'Honda'
-  end
-
-  test "shouldn't find MyString" do
-    get search_makes_url, params: { search: "MyString" }
-    assert_select 'td', false
+    assert_select 'td', 'GMC'
   end
 
   test "should get index" do
@@ -74,12 +69,5 @@ class MakesControllerTest < ActionDispatch::IntegrationTest
       country: "a"} }
     assert_response :success
   end
-
-  test "should destroy make" do
-    assert_difference('Make.count', -1) do
-      delete make_url(@make)
-    end
-
-    assert_redirected_to makes_url
+  
   end
-end

@@ -5,15 +5,15 @@ class PartTest < ActiveSupport::TestCase
     part = Part.create({:part => ""})
     refute part.valid?
     refute part.save
-    assert_equal({:part=>["is too short (minimum 2 characters)"]},
-      p.errors.messages)
+    assert_equal({:part=>["is too short (minimum is 2 characters)"]},
+      part.errors.messages)
   end
 
   test "for one character part name" do
     part = Part.create({:part => "b"})
     refute part.valid?
     refute part.save
-    assert_equal({:part=>["is too short (minimum 2 characters)"]},
+    assert_equal({:part=>["is too short (minimum is 2 characters)"]},
       part.errors.messages)
   end
 

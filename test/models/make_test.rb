@@ -17,7 +17,7 @@ class MakeTest < ActiveSupport::TestCase
     refute make.valid?
     refute make.save
     assert_equal({:name=>["is too short (minimum is 2 characters)"], :country =>["is too short (minimum is 2 characters)"]},
-      m.errors.messages)
+      make.errors.messages)
   end
 
   test "for two character names (valid)" do

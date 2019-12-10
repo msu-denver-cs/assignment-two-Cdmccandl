@@ -7,7 +7,7 @@ class CarTest < ActiveSupport::TestCase
   car =  Car.create({make_id: 1, model: "", VIN: "PR23"})
   refute car.valid?
   refute car.save
-  assert_equal({:make=>["must exist","cannot be blank"], :model=>["can't be blank", "is too short (minimum is 2 characters)"]},
+  assert_equal({:make=>["must exist","can't be blank"], :model=>["can't be blank", "is too short (minimum is 2 characters)"]},
       car.errors.messages)
   end
 

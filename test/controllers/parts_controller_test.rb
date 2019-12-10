@@ -10,7 +10,7 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
   end
 
   test "should find part names from the fixture" do
-    assert Part.where("part like ?", "Part1").length == 1
+    assert Part.where("part like ?", "PartOne").length == 1
   end
 
   test "searches always return 200" do
@@ -20,12 +20,7 @@ class PartsControllerTest < ActionDispatch::IntegrationTest
 
   test "should find PartOne" do
     get search_parts_url, params: { search: "PartOne" }
-    assert_select 'td', 'Part1'
-  end
-
-  test "shouldn't find MyString" do
-    get search_parts_url, params: { search: "MyString" }
-    assert_select 'td', false
+    assert_select 'td', 'PartOne'
   end
 
   test "should get index" do
